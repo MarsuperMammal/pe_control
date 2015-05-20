@@ -1,0 +1,5 @@
+r10k::sources:
+  puppet:
+    basedir: /etc/puppetlabs/puppet/environments
+    remote: git@github.com:marsupermammal/pw_control.git
+    prefix: 'false'
