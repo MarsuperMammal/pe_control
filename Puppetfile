@@ -20,5 +20,5 @@ mod 'pw_puppet',
   :branch => 'stable'
 
 mod 'puppetlabs_aws',
-  :git => 'git@github.com:puppetlabs/puppetlabs-aws.git'
+  :git => 'git@github.com:puppetlabs/puppetlabs-aws.git',
   :branch => 'master'
