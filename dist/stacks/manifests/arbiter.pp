@@ -1,0 +1,2 @@
+class stacks::arbiter {
+}

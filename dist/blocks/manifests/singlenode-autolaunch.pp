@@ -1,0 +1,2 @@
+class blocks::singlenode-autolaunch {
+}
