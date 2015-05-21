@@ -18,3 +18,7 @@ mod 'zack/r10k','2.6.4'
 mod 'pw_puppet',
   :git => 'git@github.com:Marsupermammal/pw_puppet.git',
   :branch => 'stable'
+
+mod 'puppetlabs_aws',
+  :git => 'git@github.com:puppetlabs/puppetlabs-aws.git'
+  :branch => 'master'
