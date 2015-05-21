@@ -15,10 +15,10 @@ mod 'puppetlabs/vcsrepo','1.2.0'
 mod 'stahnma/epel','1.0.2'
 mod 'zack/r10k','2.6.4'
 
+mod 'aws',
+  :git => 'git@github.com:puppetlabs/puppetlabs-aws.git',
+  :branch => 'master'
+
 mod 'pw_puppet',
   :git => 'git@github.com:Marsupermammal/pw_puppet.git',
   :branch => 'stable'
-
-mod 'puppetlabs_aws',
-  :git => 'git@github.com:puppetlabs/puppetlabs-aws.git',
-  :branch => 'master'
