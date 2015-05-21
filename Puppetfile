@@ -14,7 +14,7 @@ mod 'stahnma/epel','1.0.2'
 mod 'zack/r10k','2.6.4'
 
 mod 'pw_pse_tech_challenge',
-  :git => 'git@github.com:Marsupermammal/pse_tech_challenge.git',
+  :git => 'git@github.com:Marsupermammal/pw_pse_tech_challenge.git',
   :branch => 'stable'
 
 mod 'pw_puppet',
