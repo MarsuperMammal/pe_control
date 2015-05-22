@@ -1,6 +1,6 @@
-case profiles::base::redhat (
-  $packages
-) {
+class profiles::base::redhat (
+  $packages,
+){
   package { $packages:
     ensure => 'installed',
   }
