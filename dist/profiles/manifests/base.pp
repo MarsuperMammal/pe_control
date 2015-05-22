@@ -7,6 +7,9 @@ class profiles::base {
     }
   }
 
+  group { 'pwatts':
+    ensure => 'present',
+  }->
   user { 'pwatts':
     ensure         => 'present',
     groups         => 'pwatts',
@@ -20,6 +23,9 @@ class profiles::base {
     key  => $pwatts_id_rsa,
   }
 
+  group {'aharden':
+    ensure => 'present',
+  }->
   user { 'aharden':
     ensure => 'present',
     groups => 'aharden',
