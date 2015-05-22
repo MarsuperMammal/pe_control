@@ -1,4 +1,4 @@
-class profiles::jira (
+class profiles::jiraserver (
   $jiradb_pass
 ) {
   include jira

@@ -1,10 +1,10 @@
 ---
-profiles::jira::installdir: '/opt/atlassian/atlassian-jira'
-profiles::jira::user: 'jira'
-profiles::jira::group: 'jira'
-profiles::jira::shell: '/bin/bash'
-profiles::jira::dbserver: 'localhost'
-profiles::jira::javahome: '/usr/bin'
+profiles::jiraserver::installdir: '/opt/atlassian/atlassian-jira'
+profiles::jiraserver::user: 'jira'
+profiles::jiraserver::group: 'jira'
+profiles::jiraserver::shell: '/bin/bash'
+profiles::jiraserver::dbserver: 'localhost'
+profiles::jiraserver::javahome: '/usr/bin'
 
 jira::installdir: '/opt/atlassian/atlassian-jira'
 jira::user: 'jira'
