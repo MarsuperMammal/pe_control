@@ -11,7 +11,7 @@ jira::user: 'jira'
 jira::group: 'jira'
 jira::shell: '/bin/bash'
 jira::dbserver: 'localhost'
-jira::javahome: '/usr/bin'
+jira::javahome: '/usr'
 
 profiles::base::redhat::packages:
   - 'autofs'
