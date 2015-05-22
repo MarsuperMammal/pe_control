@@ -28,7 +28,7 @@ profiles::jiraserver::javahome: '/usr/bin'
 profiles::stashserver::installdir: '/opt/atlassian/atlassian-stash'
 profiles::stashserver::homedir: '/opt/atlassian/application-data/stash-home'
 profiles::stashserver::javahome: '/usr/bin'
-profiles::stashserver::manage_git: false
+profiles::stashserver::git_manage: 'false'
 
 
 
