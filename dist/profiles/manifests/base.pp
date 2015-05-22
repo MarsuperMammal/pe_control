@@ -7,6 +7,17 @@ class profiles::base {
     }
   }
 
+  class { 'sudo' : }
+  sudo::conf {'aharden' :
+    ensure   => 'present',
+    priority => '11',
+    content  => 'pwatts ALL=(ALL) NOPASSWD: ALL'
+  }
+  sudo::conf {'pwatts' :
+    ensure   => 'present',
+    priority => '10',
+    content  => 'pwatts ALL=(ALL) NOPASSWD: ALL'
+  }
   group { 'pwatts':
     ensure => 'present',
   }->
