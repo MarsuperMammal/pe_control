@@ -1,6 +1,7 @@
 mod 'croddy/make','0.0.5'
 mod 'erwbgy/limits','0.3.1'
 mod 'jfryman/nginx','0.2.6'
+mod 'jfryman/selinux','0.2.3'
 mod 'nanliu/staging','1.0.3'
 mod 'puppetlabs/apt','2.0.1'
 mod 'puppetlabs/concat','1.2.0'
