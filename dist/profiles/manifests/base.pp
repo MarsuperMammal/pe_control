@@ -30,6 +30,6 @@ class profiles::base {
   ssh_authorized_key { 'aharden@te.com':
     user => 'aharden',
     type => 'ssh-rsa',
-    key  => $aharden_ssh_key,
+    key  => $aharden_id_rsa,
   }
 }
