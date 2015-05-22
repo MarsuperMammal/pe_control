@@ -10,10 +10,9 @@ jira:
 profiles::base::redhat::packages:
   - 'autofs'
   - 'bind-utils'
-  - 'build-essentials'
   - 'gcc'
   - 'glibc'
-  - 'java'
+  - 'java-1.8.0-openjdk'
   - 'ruby'
   - 'ruby-devel'
   - 'wget'
