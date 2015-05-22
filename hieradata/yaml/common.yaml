@@ -16,8 +16,12 @@ profiles::base::redhat::packages:
   - 'ruby-devel'
   - 'wget'
   - 'zsh'
+r10k::configfile: /etc/puppetlabs/puppet/r10k.yaml
+r10k::manage_configfile_symlink: true
+r10k::configfile_symlink: /etc/r10k.yaml
 r10k::sources:
   puppet:
     basedir: '/etc/puppetlabs/puppet/environments'
     remote: 'git@github.com:marsupermammal/pw_control.git'
     prefix: 'false'
+r10k::version: 1.5.1
