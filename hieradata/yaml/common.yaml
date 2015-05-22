@@ -43,4 +43,4 @@ r10k::version: 1.5.1
 stash::installdir: '/opt/atlassian/atlassian-stash'
 stash::homedir: '/opt/atlassian/application-data/stash-home'
 stash::javahome: '/usr/bin'
-stash::git_manage: 'false'
+stash::git_manage: false
