@@ -2,10 +2,11 @@ class profiles::jira (
   $jiradb_pass
 ) {
   include jira
+  include postgresql
 
-  class {'postgres::server': }
+  class {'postgresql::server': }
 
-  postgres::server::db { 'jira':
+  postgresql::server::db { 'jira':
     user     => 'jiraadm',
     password => $jiradb_pass,
   }
