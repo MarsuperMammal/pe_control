@@ -2,7 +2,6 @@ class profiles::jira (
   $jiradb_pass
 ) {
   include jira
-  include postgresql
 
   class {'postgresql::server': }
 
