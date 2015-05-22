@@ -6,6 +6,13 @@ profiles::jira::shell: '/bin/bash'
 profiles::jira::dbserver: 'localhost'
 profiles::jira::javahome: '/usr/bin'
 
+jira::installdir: '/opt/atlassian/atlassian-jira'
+jira::user: 'jira'
+jira::group: 'jira'
+jira::shell: '/bin/bash'
+jira::dbserver: 'localhost'
+jira::javahome: '/usr/bin'
+
 profiles::base::redhat::packages:
   - 'autofs'
   - 'bind-utils'
