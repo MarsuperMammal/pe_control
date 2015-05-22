@@ -9,7 +9,7 @@ class profiles::base {
 
   user { 'pwatts':
     ensure         => 'present',
-    group          => 'pwatts',
+    groups         => 'pwatts',
     home           => '/home/pwatts',
     shell          => '/bin/zsh',
     purge_ssh_keys => true,
@@ -22,7 +22,7 @@ class profiles::base {
 
   user { 'aharden':
     ensure => 'present',
-    group  => 'aharden',
+    groups => 'aharden',
     home   => '/home/aharden',
     shell  => '/bin/zsh',
     purge_ssh_keys => true,
