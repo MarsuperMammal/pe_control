@@ -9,14 +9,4 @@ class profiles::jiraserver (
     user     => 'jiraadm',
     password => $jiradb_pass,
   }
- 
-  group { 'jira':
-    ensure => 'present',
-  }
-
-  user { 'jira':
-    ensure => 'present',
-    groups => 'jira',
-  }
-
 }
