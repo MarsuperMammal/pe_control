@@ -1,4 +1,4 @@
-class profiles::stash (
+class profiles::stashserver (
   $stashdb_pass
 ) {
   include stash
