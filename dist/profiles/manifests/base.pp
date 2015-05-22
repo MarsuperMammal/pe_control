@@ -17,6 +17,12 @@ class profiles::base {
     shell          => '/bin/zsh',
     purge_ssh_keys => true,
   }->
+  file { '/home/pwatts':
+    ensure => 'directory',
+    owner  => 'pwatts',
+    group  => 'pwatts',
+    mode   => '0700',
+  }->
   file { '/home/pwatts/.ssh':
     ensure => 'directory',
     owner  => 'pwatts',
@@ -38,6 +44,12 @@ class profiles::base {
     home   => '/home/aharden',
     shell  => '/bin/zsh',
     purge_ssh_keys => true,
+  }->
+  file { '/home/aharden/':
+    ensure => 'directory',
+    owner  => 'aharden',
+    group  => 'aharden',
+    mode   => '0700',
   }->
   file { '/home/aharden/.ssh':
     ensure => 'directory',
