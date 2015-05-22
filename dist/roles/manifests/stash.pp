@@ -1,3 +1,3 @@
 class profiles::stash {
-  include profiles::stash
+  include profiles::stashserver
 }
