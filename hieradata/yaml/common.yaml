@@ -1,3 +1,14 @@
+profiles::base::redhat::packages:
+  - 'autofs'
+  - 'bind-utils'
+  - 'build-essentials'
+  - 'gcc'
+  - 'glibc'
+  - 'java'
+  - 'ruby'
+  - 'ruby-devel'
+  - 'wget'
+  - 'zsh'
 r10k::sources:
   puppet:
     basedir: /etc/puppetlabs/puppet/environments
