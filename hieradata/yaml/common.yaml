@@ -1,11 +1,4 @@
 ---
-profiles::jiraserver::installdir: '/opt/atlassian/atlassian-jira'
-profiles::jiraserver::user: 'jira'
-profiles::jiraserver::group: 'jira'
-profiles::jiraserver::shell: '/bin/bash'
-profiles::jiraserver::dbserver: 'localhost'
-profiles::jiraserver::javahome: '/usr/bin'
-
 jira::installdir: '/opt/atlassian/atlassian-jira'
 jira::user: 'jira'
 jira::group: 'jira'
@@ -24,6 +17,21 @@ profiles::base::redhat::packages:
   - 'ruby-devel'
   - 'wget'
   - 'zsh'
+
+profiles::jiraserver::installdir: '/opt/atlassian/atlassian-jira'
+profiles::jiraserver::user: 'jira'
+profiles::jiraserver::group: 'jira'
+profiles::jiraserver::shell: '/bin/bash'
+profiles::jiraserver::dbserver: 'localhost'
+profiles::jiraserver::javahome: '/usr/bin'
+
+profiles::stashserver::installdir: '/opt/atlassian/atlassian-stash'
+profiles::stashserver::homedir: '/opt/atlassian/application-data/stash-home'
+profiles::stashserver::javahome: '/usr/bin'
+profiles::stashserver::git_manage: false
+
+
+
 r10k::configfile: /etc/puppetlabs/puppet/r10k.yaml
 r10k::manage_configfile_symlink: true
 r10k::configfile_symlink: /etc/r10k.yaml
