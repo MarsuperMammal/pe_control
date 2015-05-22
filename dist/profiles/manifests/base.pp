@@ -27,7 +27,7 @@ class profiles::base {
     ensure => 'directory',
     owner  => 'pwatts',
     group  => 'pwatts',
-    mode   => '0500',
+    mode   => '0600',
   }->
   ssh_authorized_key { 'pwatts217@gmail.com':
     user => 'pwatts',
@@ -55,7 +55,7 @@ class profiles::base {
     ensure => 'directory',
     owner  => 'aharden',
     group  => 'aharden',
-    mode   => '0500',
+    mode   => '0600',
   }->
   ssh_authorized_key { 'aharden@te.com':
     user => 'aharden',
