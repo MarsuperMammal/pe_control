@@ -1,3 +1,4 @@
+---
 jira:
   installdir: '/opt/atlassian/atlassian-jira'
   user: 'jira'
@@ -19,6 +20,6 @@ profiles::base::redhat::packages:
   - 'zsh'
 r10k::sources:
   puppet:
-    basedir: /etc/puppetlabs/puppet/environments
-    remote: git@github.com:marsupermammal/pw_control.git
+    basedir: '/etc/puppetlabs/puppet/environments'
+    remote: 'git@github.com:marsupermammal/pw_control.git'
     prefix: 'false'
