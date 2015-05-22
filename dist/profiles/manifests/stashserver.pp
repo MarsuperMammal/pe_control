@@ -5,7 +5,7 @@ class profiles::stashserver (
 
   class { 'postgresql::server' : }
 
-  file { '/opt/atlassian':
+  file { ['/opt/atlassian','/opt/atlassian/application-data/','/opt/atlassian/application-data/stash-home'] :
     ensure => 'directory',
     owner  => 'stash',
     group  => 'stash',
