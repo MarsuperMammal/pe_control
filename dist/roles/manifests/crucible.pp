@@ -1,3 +1,3 @@
 class roles::crucible {
-  include profiles::crucible
+  include profiles::crucibleserver
 }
