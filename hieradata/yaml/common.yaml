@@ -70,7 +70,7 @@ profiles::teamcityagent::gemlist:
   - 'little-plugger'
   - 'logging'
   - 'memoist'
-  - 'mimi-types'
+  - 'mime-types'
   - 'minitest'
   - 'mini_portile'
   - 'multipart-post'
