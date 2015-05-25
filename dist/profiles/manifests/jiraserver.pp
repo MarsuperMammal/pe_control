@@ -1,6 +1,4 @@
-class profiles::jiraserver (
-  $jiradb_pass
-) {
+class profiles::jiraserver {
   include jira
 
   class {'postgresql::server': }
@@ -14,6 +12,6 @@ class profiles::jiraserver (
 
   postgresql::server::db { 'jira':
     user     => 'jiraadm',
-    password => $jiradb_pass,
+    password => hiera('jiradb_pass'),
   }
 }

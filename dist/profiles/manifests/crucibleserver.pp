@@ -1,10 +1,8 @@
-class profiles::crucibleserver (
-  $crucibledb_pass
-) {
+class profiles::crucibleserver {
   class {'postgresql::server' : }
 
   postgresql::server::db { 'crucible':
     user     => 'crucibledb',
-    password => $crucibledb_pass,
+    password => hiera('crucibledb_pass'),
   }
 }

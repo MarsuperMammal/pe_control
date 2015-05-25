@@ -1,6 +1,4 @@
-class profiles::stashserver (
-  $stashdb_pass
-) {
+class profiles::stashserver {
   include stash
 
   class { 'postgresql::server' : }
@@ -14,6 +12,6 @@ class profiles::stashserver (
 
   postgresql::server::db { 'stash':
     user     => 'stash',
-    password => $stashdb_pass,
+    password => hiera('stashdb_pass'),
   }
 }
