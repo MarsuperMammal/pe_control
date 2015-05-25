@@ -1,6 +1,7 @@
 class profiles::base::redhat (
   $packages,
 ){
+  include rvm
   package { $packages:
     ensure => 'installed',
   }
@@ -11,8 +12,6 @@ class profiles::base::redhat (
     ensure => 'stopped',
     enable => false,
   }
-
-  class { '::rvm': }
 
   rvm_system_ruby {
     'ruby-2.0-p645':
