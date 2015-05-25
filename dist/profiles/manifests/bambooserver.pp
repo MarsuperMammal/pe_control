@@ -1,11 +1,5 @@
 # Bamboo CI tool from Atlassian, because I'm lazy
 class profiles::bambooserver {
-  file { '/opt/bamboo':
-    ensure => 'directory',
-    owner  => 'bamboo',
-    group  => 'bamboo',
-    mode   => '0755',
-  }
   class { '::bamboo':
     username    => 'bamboo',
     pass_hash   => hiera('bamboo_pass'),
