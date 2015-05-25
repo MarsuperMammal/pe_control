@@ -14,7 +14,7 @@ class profiles::jiraserver {
 
   file { $cert_file:
     ensure  => 'present',
-    owner    => 'root',
+    owner   => 'root',
     group   => 'root',
     mode    => '0644',
     content => template("${module_name}/jira/cert.pem.erb"),
@@ -22,8 +22,8 @@ class profiles::jiraserver {
 
   file { $key_file:
     ensure  => 'present',
-    owner    => 'root',
-    group   => 'ssl-cert',
+    owner   => 'root',
+    group   => 'root',
     mode    => '0400',
     content => template("${module_name}/jira/key.pem.erb"),
   }
