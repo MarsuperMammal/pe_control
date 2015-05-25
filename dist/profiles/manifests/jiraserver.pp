@@ -34,9 +34,9 @@ class profiles::jiraserver {
     default_vhost => false,
   }
 
-  class { 'apache::mod::rewrite': }
-  class { 'apache::mod::ssl':     }
-  class { 'postgresql::server':   }
+  class { '::apache::mod::rewrite': }
+  class { '::apache::mod::ssl':     }
+  class { '::postgresql::server':   }
 
   apache::vhost { 'jira non-ssl':
     servername => 'jira',
