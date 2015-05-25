@@ -14,7 +14,7 @@ class profiles::base::redhat (
   }
 
   rvm_system_ruby {
-    'ruby-2.0-p645':
+    'ruby-2.0-p643':
       ensure      => 'present',
       default_use => true,
   }
