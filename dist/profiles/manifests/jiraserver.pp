@@ -12,6 +12,13 @@ class profiles::jiraserver {
     mode   => '0755',
   }
 
+  file { '/etc/ssl/private':
+    ensure => 'directory',
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0500',
+  }
+
   file { $cert_file:
     ensure  => 'present',
     owner   => 'root',
