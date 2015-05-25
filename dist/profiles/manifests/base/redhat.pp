@@ -14,9 +14,8 @@ class profiles::base::redhat (
   }
 
   rvm_system_ruby {
-    'ruby-2.0-p643':
+    'ruby-2.0':
       ensure      => 'present',
       default_use => true,
-      build_opts  => ['--binary'],
   }
 }
