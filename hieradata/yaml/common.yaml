@@ -1,4 +1,6 @@
 ---
+java::distribution: 'jdk'
+
 jira::installdir: '/opt/atlassian/atlassian-jira'
 jira::user: 'jira'
 jira::group: 'jira'
