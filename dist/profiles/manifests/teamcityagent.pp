@@ -1,4 +1,6 @@
-class profiles::teamcityagent {
+class profiles::teamcityagent (
+  $gemlist
+) {
   Rvm_gem {
     ruby_version => 'ruby-2.0.0-p645',
     ensure       => 'latest',
