@@ -64,7 +64,7 @@ class profiles::jiraserver {
         url  => 'http://localhost:8080/',
       },
     ],
-    require             => Apache::Vhost ['jira non-ssl'],
+    require             => Apache::Vhost['jira non-ssl'],
   }
 
 
