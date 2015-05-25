@@ -35,7 +35,7 @@ class profiles::r10k_webhook {
 
   apache::vhost { 'r10k_webhook ssl':
     servername          => 'r10k_webhook',
-    port                => '443',
+    port                => '8443',
     docroot             => '/var/www',
     default_vhost       => true,
     ssl                 => true,
