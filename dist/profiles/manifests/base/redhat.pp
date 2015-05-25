@@ -17,5 +17,6 @@ class profiles::base::redhat (
     'ruby-2.0-p643':
       ensure      => 'present',
       default_use => true,
+      build_opts  => ['--binary'],
   }
 }
