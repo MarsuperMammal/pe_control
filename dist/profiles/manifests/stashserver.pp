@@ -21,7 +21,7 @@ class profiles::stashserver {
     password => hiera('stashdb_pass'),
   }
 
-  vcs_repo { "${stash_home}/external-hooks" :
+  vcsrepo { "${stash_home}/external-hooks" :
     ensure   => 'latest',
     provider => 'git',
     source   => 'http://stash.pwatts.net:7990/mtp/pw_hooks.git',
