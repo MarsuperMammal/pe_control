@@ -21,6 +21,6 @@ class profiles::stashserver {
 
   file { '/external-hooks/puppet_prereceive.sh':
     ensure => 'file',
-    source => "puppet:///${module_name}/puppet_prereceive.sh",
+    source => "puppet:///modules/${module_name}/puppet_prereceive.sh",
   }
 }
