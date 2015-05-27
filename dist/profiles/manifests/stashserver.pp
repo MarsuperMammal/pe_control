@@ -12,7 +12,7 @@ class profiles::stashserver {
 
   class { 'postgresql::server' : }
 
-  file { ['/opt/atlassian','/opt/atlassian/application-data',"${stash_home}/external-hooks"] :
+  file { ['/opt/atlassian','/opt/atlassian/application-data'] :
     ensure => 'directory',
   }
 
@@ -24,7 +24,7 @@ class profiles::stashserver {
   vcsrepo { "${stash_home}/external-hooks" :
     ensure   => 'latest',
     provider => 'git',
-    source   => 'http://stash.pwatts.net:7990/mtp/pw_hooks.git',
+    source   => 'http://stash.pwatts.net:7990/scm/mtp/pw_hooks.git',
     revision => 'stable',
   }
 }
