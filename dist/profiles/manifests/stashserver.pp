@@ -12,7 +12,7 @@ class profiles::stashserver {
 
   class { 'postgresql::server' : }
 
-  file { ['/opt/atlassian','/opt/atlassian/application-data',"$stash_home/external-hooks"] :
+  file { ['/opt/atlassian','/opt/atlassian/application-data',"${stash_home}/external-hooks"] :
     ensure => 'directory',
   }
 
@@ -21,8 +21,10 @@ class profiles::stashserver {
     password => hiera('stashdb_pass'),
   }
 
-  file { "$stash_home/external-hooks/puppet_prereceive.sh":
-    ensure => 'file',
-    source => "puppet:///modules/${module_name}/puppet_prereceive.sh",
+  vcs_repo { "${stash_home}/external-hooks" :
+    ensure   => 'latest',
+    provider => 'git',
+    source   => 'http://stash.pwatts.net:7990/mtp/pw_hooks.git',
+    revision => 'stable',
   }
 }
