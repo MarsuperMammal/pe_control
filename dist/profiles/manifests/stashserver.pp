@@ -10,8 +10,7 @@ class profiles::stashserver {
 
   class { 'postgresql::server' : }
 
-  file { ['/opt/atlassian','/opt/atlassian/application-data/',\
-  '/external-hooks'] :
+  file { ['/opt/atlassian','/opt/atlassian/application-data','/external-hooks'] :
     ensure => 'directory',
   }
 
