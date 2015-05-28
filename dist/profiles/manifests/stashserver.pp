@@ -3,7 +3,7 @@ class profiles::stashserver {
   include stash
 
   $stash_home = hiera('stash::homedir')
-
+  $hookdir = "${stash_home}/external_hooks/commit_hooks"
   File {
     owner  => 'stash',
     group  => 'stash',
@@ -12,7 +12,12 @@ class profiles::stashserver {
 
   class { 'postgresql::server' : }
 
-  file { ['/opt/atlassian','/opt/atlassian/application-data'] :
+  file { ['/opt/atlassian',
+          '/opt/atlassian/application-data',
+          "${stash_home}/external_hooks",
+          $hookdir,
+          "${hookdir}/commit_hooks",
+          ] :
     ensure => 'directory',
   }
 
@@ -21,10 +26,18 @@ class profiles::stashserver {
     password => hiera('stashdb_pass'),
   }
 
-  vcsrepo { "${stash_home}/external-hooks" :
-    ensure   => 'latest',
-    provider => 'git',
-    source   => 'http://stash.pwatts.net:7990/scm/mtp/pw_hooks.git',
-    revision => 'stable',
+  file { "${hookdir}/puppet_prereceive.sh" :
+    ensure   => file,
+    template => template("${module_name}/puppet_prereceive.erb"),
+  }
+
+  file { "${hookdir}/commit_hooks/puppet_lint_checks.sh" :
+    ensure => 'file',
+    source => "puppet:///modules/${module_name}/puppet_lint_checks.sh",
+  }
+
+  file { "${hookdir}/commit_hooks/puppet_manifest_syntax_checks.sh" :
+    ensure => 'file',
+    source => "puppet:///modules/${module_name}/puppet_manifest_syntax_checks.sh",
   }
 }
