@@ -1,3 +1,4 @@
+# Profile for Crucible
 class profiles::crucibleserver {
   class {'postgresql::server' : }
 

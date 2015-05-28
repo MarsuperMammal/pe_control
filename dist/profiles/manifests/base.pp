@@ -1,3 +1,4 @@
+# Base family to include in default role
 class profiles::base {
   case $::osfamily {
     'redhat' : {

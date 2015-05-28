@@ -1,3 +1,4 @@
+# Base profile for Redhat systems
 class profiles::base::redhat (
   $packages,
 ){

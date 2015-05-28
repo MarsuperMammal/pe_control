@@ -1,3 +1,4 @@
+# Team City agent profile
 class profiles::teamcityagent (
   $gemlist
 ) {
