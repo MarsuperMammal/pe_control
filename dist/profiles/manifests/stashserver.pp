@@ -27,7 +27,7 @@ class profiles::stashserver {
   }
 
   file { "${hookdir}/puppet_prereceive.sh" :
-    ensure   => file,
+    ensure  => file,
     content => template("${module_name}/puppet_prereceive.erb"),
   }
 
