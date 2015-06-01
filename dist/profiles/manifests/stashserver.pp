@@ -40,4 +40,9 @@ class profiles::stashserver {
     ensure => 'file',
     source => "puppet:///modules/${module_name}/puppet_manifest_syntax_checks.sh",
   }
+
+  file { "${hookdir}/stash_branch_cascade.sh" :
+    ensure => 'file',
+    source => "puppet:///modules/${module_name}/stash_branch_cascade.sh",
+  }
 }
