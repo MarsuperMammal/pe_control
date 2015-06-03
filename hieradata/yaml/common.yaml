@@ -95,7 +95,15 @@ r10k::configfile: /etc/puppetlabs/puppet/r10k.yaml
 r10k::manage_configfile_symlink: true
 r10k::configfile_symlink: /etc/r10k.yaml
 r10k::sources:
-  puppet:
+  fiefs:
+    basedir: '/etc/puppetlabs/puppet/environments'
+    remote: 'git@github.com:marsupermammal/pw_fiefs.git'
+    prefix: 'false'
+  vassals:
+    basedir: '/etc/puppetlabs/puppet/environments'
+    remote: 'git@github.com:marsupermammal/pw_vassals.git'
+    prefix: 'false'
+  lords:
     basedir: '/etc/puppetlabs/puppet/environments'
     remote: 'git@github.com:marsupermammal/pw_control.git'
     prefix: 'false'
