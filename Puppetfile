@@ -1,3 +1,4 @@
+mod 'carlasouza/virt','1.1.0'
 mod 'croddy/make','0.0.5'
 mod 'erwbgy/limits','0.3.1'
 mod 'jfryman/nginx','0.2.6'
